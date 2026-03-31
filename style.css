@@ -4,19 +4,11 @@ body {
     text-align: center;
 }
 
-.container {
-    margin-top: 50px;
-}
+.container { margin-top: 50px; }
 
-h1 {
-    color: #333;
-}
+h1 { color: #333; }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
+button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
 
 ul {
     list-style: none;
@@ -24,14 +16,27 @@ ul {
     margin-top: 20px;
 }
 
-li {
-    background: white;
-    margin: 5px auto;
-    padding: 5px;
-    width: 160px;
-    border-radius: 5px;
+/* Output grid */
+#output {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-auto-rows: min-content;
+    gap: 7px 15px;
+    justify-content: center;
+    padding: 0;
 }
 
+li {
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+/* Fizz,Buzz,FizzBuzz colors */
 .fizz { color: blue; font-weight: bold; }
 .buzz { color: red; font-style: italic; }
 .fizzbuzz { color: violet; font-weight: bold; font-style: italic; }
+/* User inputs */
+.inputs { margin-bottom: 20px; }
+.inputs label { margin-right: 10px; font-weight: bold; }
+input { width: 60px; padding: 3px 5px; }

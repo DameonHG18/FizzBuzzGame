@@ -2,19 +2,25 @@ function runFizzBuzz(){
     const output = document.getElementById("output");
     output.innerHTML = "";
 
-    for (let num = 1; num <= 20; num++){
+    //user input
+    const fizzNum = parseInt(document.getElementById("fizzNum").value) || 3;
+    const buzzNum = parseInt(document.getElementById("buzzNum").value) || 5;
+    let maxNum = parseInt(document.getElementById("maxNum").value) || 20;
+    if (maxNum > 100) maxNum = 100; //Sets limit to 100
+
+    for (let num = 1; num <= maxNum; num++){
         let word = "";
         let className = "";
 
-        if (num%3 === 0 && num%5 === 0){
+        if (num%fizzNum === 0 && num%buzzNum === 0){
             word = " FizzBuzz";
             className = "fizzbuzz";
         }
-        else if (num%3 === 0){
+        else if (num%fizzNum === 0){
             word = " Fizz";
             className = "fizz";
         }
-        else if (num%5 === 0){
+        else if (num%buzzNum === 0){
             word = " Buzz";
             className = "buzz";
         }

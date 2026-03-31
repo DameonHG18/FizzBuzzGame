@@ -10,8 +10,16 @@
 
         <div class="container">
             <h1>FizzBuzz</h1>
-            <button onclick="runFizzBuzz()">Run FizzBuzz</button>
+            
+            <div class="inputs">
+                <label>Fizz number: <input type="number" id="fizzNum" value="3" min="1"></label>
+                <label>Buzz number: <input type="number" id="buzzNum" value="5" min="1"></label>
+                <label>Max number: <input type="number" id="maxNum" value="20" min="1" max="100"></label>
+                <button onclick="runFizzBuzz()">Run FizzBuzz</button>
+            </div>
+
             <ul id="output"></ul>
+
         </div>
 
         <script src="script.js"></script>
